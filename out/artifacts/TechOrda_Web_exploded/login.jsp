@@ -16,40 +16,42 @@
             crossorigin="anonymous"></script>
 
 </head>
-<body class="bg-light"
+<body class="bg-light">
 
 <%@include file="navbar.jsp" %>
 
-
 <div class="container">
     <div class="col" style="padding: 40px; ">
-        <div class="card mt-5 mx-auto" style="width: 59rem; height: 21rem;box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
-            <h5 class="card-header" style="padding: 15px">Login Page</h5>
+        <div class="card mt-5 mx-auto"
+             style="width: 59rem; height: 21rem;box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);">
+            <h5 class="card-header" style="padding: 15px">Авторизация</h5>
             <div class="card-body">
                 <form action="/login-page" method="post">
-                <div class="row">
-                    <div class="col-12">
-                    <label>EMAIL: </label>
+                    <div class="row">
+                        <div class="col-12">
+                            <label>Электронная почта: </label>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <input type="email" class="form-control" name="email" required placeholder="Insert Email"></p>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <input type="email" class="form-control" name="email" required
+                                   placeholder="Введите Email"></p>
+                        </div>
                     </div>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-12">
-                        <label>PASSWORD: </label>
-                    </div>
-                </div>
-                <div class="row mt-2">
-                    <div class="col-12">
-                        <input type="password" class="form-control" name="password" required placeholder="Insert Password"></p>
-                    </div>
-                </div>
                     <div class="row mt-3">
                         <div class="col-12">
-                          <button class="btn btn-success">Login</button>
+                            <label>Пароль: </label>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <input type="password" class="form-control" name="password" required
+                                   placeholder="Введите пароль"></p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <button class="btn btn-danger">Войти</button>
                         </div>
                     </div>
 

@@ -2,10 +2,12 @@ package DataBase;
 
 public class Users {
 
-    Long id;
-    String email;
-    String password;
-    String fullName;
+    private Long id;
+    private  String email;
+    private String password;
+    private String fullName;
+
+    private int role;
 
     public Users() {
     }
@@ -50,4 +52,11 @@ public class Users {
     }
 
 
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
 }

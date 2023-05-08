@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -27,6 +28,8 @@ public class LoginServlet extends HttpServlet {
             Users users= DBUtil.getUsers(email);
 
         if (users!=null && users.getPassword().equals(password)){
+            HttpSession session=req.getSession();
+            session.setAttribute("currentUser", users);
             resp.sendRedirect("/profile");
         }else {
             resp.sendRedirect("/login-page?error");
